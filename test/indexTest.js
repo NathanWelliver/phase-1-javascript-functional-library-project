@@ -136,10 +136,12 @@ describe('index.js', function () {
     })
 
     it('correctly returns an empty array if no matching values are found', function () {
-      const greaterThan10 = myFilter(testObj, excluder)
-      expect(greaterThan10.length).to.equal(0)
+      const emptyArray = myFilter(testObj, excluder)
+      expect(emptyArray).to.deep.equal([]); // Update the assertion to check for an empty array
     })
   })
+
+  
 
   describe('mySize', function () {
     const testArr = unmodifiedTestArr.slice()
